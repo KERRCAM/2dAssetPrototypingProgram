@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/kerrcameron/Documents/COMP SCI/2dAssetPrototypingProgram/main.cpp
+iostream
+-
+fstream
+-
+sstream
+-
+
