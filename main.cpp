@@ -65,7 +65,7 @@ private:
     }
 
 public:
-    void openFolder(){
+    void openFolder(){ //doesnt loop in case of incorrect input
         bool found = false;
         bool validFolder = false;
         for (int i = 0; i < 10; i++){
@@ -99,8 +99,7 @@ public:
         int space; //gets index of empty spot if there is one
         string newFolder;
         for (int i = 0; i < 10; i++){
-            if (folderNames[i] != ""){
-                newFolder = CM.getString("What would you like to call new folder?: ");
+            if (folderNames[i] == ""){
                 found = true;
                 space = i;
             }
@@ -108,6 +107,7 @@ public:
         if (found == false){
             cout << "No space for new folder. Please delete existing folder to make room for new folder." << endl;
         } else{
+            newFolder = CM.getString("What would you like to call new folder?: ");
             folderNames[space] = newFolder;
             ofstream folder("filename.txt");
         }
